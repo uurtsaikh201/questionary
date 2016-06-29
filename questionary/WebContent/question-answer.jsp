@@ -132,8 +132,11 @@
 							</a></li>
 							<li><a href="questiontypes.jsp"> <i class="fa fa-question-circle"></i> <span>Question Types</span>
 							</a></li>
-							<li class="dropdown-submenu active"><a href="question-answer.jsp"> <i class="fa fa-pencil"></i> <span>Answers</span>
+							<li class="dropdown-submenu active"><a href="question-answer.jsp"> <i class="fa fa-pencil"></i> <span>Answer question</span>
 							</a></li>
+								<li><a href="answerlist.jsp"> <i class="fa fa-pencil"></i> <span>Answer list</span>
+							</a></li>
+							
 						</ul>
 					</nav>
 				</section>

@@ -37,14 +37,15 @@
 				<section>
 					<nav class="nav-primary hidden-xs">
 						<ul class="nav">
-							<li class="dropdown-submenu active"><a href="index.jsp"> <b class="badge bg-primary pull-right"></b> <i class="fa fa-users"></i> <span>Questions</span>
+							<li ><a href="index.jsp"> <b class="badge bg-primary pull-right"></b> <i class="fa fa-users"></i> <span>Questions</span>
 							</a></li>
 							<li ><a href="questiontypes.jsp"> <i class="fa fa-question-circle"></i> <span>Question Types</span>
 							</a></li>
-							<li><a href="question-answer.jsp"> <i class="fa fa-pencil"></i> <span>Answer question</span>
+							<li ><a href="question-answer.jsp"> <i class="fa fa-pencil"></i> <span>Answer question</span>
 							</a></li>
-								<li><a href="answerlist.jsp"> <i class="fa fa-pencil"></i> <span>Answer list</span>
+							<li class="dropdown-submenu active"><a href="answerlist.jsp"> <i class="fa fa-pencil"></i> <span>Answer list</span>
 							</a></li>
+							
 						</ul>
 					</nav>
 				</section>
@@ -80,6 +81,11 @@
 												<th>Expire Date</th>
 												<th>Options</th>
 												<th>Description</th>
+												<th>Email</th>
+												<th>First name</th>
+												<th>Last name</th>
+												<th>Phone</th>
+												
 											</tr>
 										</thead>
 									</table>
@@ -101,7 +107,7 @@
 			jQuery.support.cors = true;
 			$.ajax({
 				type : "GET",
-				url : service + 'questions',
+				url : service + 'questions/answers',
 				data : "{}",
 				contentType : "application/json; charset=utf-8",
 				dataType : "json",
@@ -113,7 +119,11 @@
 						trHTML += '<td>' + item.type + '</td>';
 						trHTML += '<td>' + item.expireDate + '</td>';
 						trHTML += '<td>' + item.options + '</td>';
-						trHTML += '<td>' + item.description + '</td></tr>';
+						trHTML += '<td>' + item.answerText + '</td>';
+						trHTML += '<td>' + item.email + '</td>';
+						trHTML += '<td>' + item.fname + '</td>';
+						trHTML += '<td>' + item.lname + '</td>';
+						trHTML += '<td>' + item.phone + '</td></tr>';
 						
 					});
 					$('#questions').append(trHTML);

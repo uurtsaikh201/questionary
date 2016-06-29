@@ -43,7 +43,7 @@ public class QuestionaryAnswerServlet extends HttpServlet {
 	 * @see HttpServlet#HttpServlet()
 	 */
 	private String filePath = "d:\\temp";
-	private int maxFileSize = 50 * 1024;
+	private int maxFileSize = 500 * 1024;
 	private File file;
 
 	public QuestionaryAnswerServlet() {

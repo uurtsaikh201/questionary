@@ -69,7 +69,7 @@ public class LoginServlet extends HttpServlet {
 				LoginResult loginResult = gson.fromJson(postResponse.toString(), LoginResult.class);
 				System.out.println("login result token:" + loginResult.getToken());
 				System.out.println("return result:" + postResponse);
-				request.getSession().setAttribute("email", loginTO.getPassword());
+				request.getSession().setAttribute("email", email);
 				request.getSession().setAttribute("fname", loginResult.getFname());
 				request.getSession().setAttribute("lname", loginResult.getLname());
 				request.getSession().setAttribute("phone", loginResult.getPhone());

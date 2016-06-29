@@ -43,6 +43,8 @@
 							</a></li>
 							<li><a href="question-answer.jsp"> <i class="fa fa-pencil"></i> <span>Answers</span>
 							</a></li>
+								<li><a href="answerlist.jsp"> <i class="fa fa-pencil"></i> <span>Answer list</span>
+							</a></li>
 						</ul>
 					</nav>
 				</section>
