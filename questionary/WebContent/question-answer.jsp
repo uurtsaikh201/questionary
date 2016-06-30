@@ -153,7 +153,7 @@
 			<section class="vbox">
 				<header class="header bg-dark bg-gradient">
 					<ul class="nav nav-tabs">
-						<li class="active"><a href="#basic" data-toggle="tab">Question</a></li>
+						<li class="active"><a href="#basic" data-toggle="tab">Answer questions</a></li>
 
 					</ul>
 				</header>

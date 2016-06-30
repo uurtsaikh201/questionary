@@ -19,8 +19,8 @@
     <script src="js/ie/fix.js" cache="false"></script>
   <![endif]-->
 </head>
-<% 
-	if(request.getSession()==null || request.getSession().getAttribute("email")==null){
+<%
+	if (request.getSession() == null || request.getSession().getAttribute("email") == null) {
 		request.getRequestDispatcher("signin.jsp").forward(request, response);
 	}
 %>
@@ -39,17 +39,17 @@
 						<ul class="nav">
 							<li class="dropdown-submenu active"><a href="index.jsp"> <b class="badge bg-primary pull-right"></b> <i class="fa fa-users"></i> <span>Questions</span>
 							</a></li>
-							<li ><a href="questiontypes.jsp"> <i class="fa fa-question-circle"></i> <span>Question Types</span>
+							<li><a href="questiontypes.jsp"> <i class="fa fa-question-circle"></i> <span>Question Types</span>
 							</a></li>
 							<li><a href="question-answer.jsp"> <i class="fa fa-pencil"></i> <span>Answer question</span>
 							</a></li>
-								<li><a href="answerlist.jsp"> <i class="fa fa-pencil"></i> <span>Answer list</span>
+							<li><a href="answerlist.jsp"> <i class="fa fa-pencil"></i> <span>Answer list</span>
 							</a></li>
 						</ul>
 					</nav>
 				</section>
 				<footer class="footer bg-gradient hidden-xs">
-				<a href="LogOutServlet"  class="btn btn-sm btn-link m-r-n-xs pull-right"> <i class="fa fa-power-off"></i>
+					<a href="LogOutServlet" class="btn btn-sm btn-link m-r-n-xs pull-right"> <i class="fa fa-power-off"></i>
 					</a> <a href="#nav" data-toggle="class:nav-vertical" class="btn btn-sm btn-link m-l-n-sm"> <i class="fa fa-bars"></i>
 					</a>
 				</footer>
@@ -64,11 +64,13 @@
 						<li class="active"><a href="#static" data-toggle="tab">Questions</a></li>
 
 					</ul>
+
 				</header>
 				<section class="scrollable wrapper">
 					<div class="tab-content">
-						<div class="tab-pane active" id="static">
 
+						<div class="tab-pane active" id="static">
+							<button type="submit" class="btn btn-sm btn-white">Create question</button>
 							<section class="panel">
 
 								<div class="table-responsive">
@@ -80,6 +82,8 @@
 												<th>Expire Date</th>
 												<th>Options</th>
 												<th>Description</th>
+												<th>Edit</th>
+												<th>Delete</th>
 											</tr>
 										</thead>
 									</table>
@@ -113,8 +117,10 @@
 						trHTML += '<td>' + item.type + '</td>';
 						trHTML += '<td>' + item.expireDate + '</td>';
 						trHTML += '<td>' + item.options + '</td>';
-						trHTML += '<td>' + item.description + '</td></tr>';
-						
+						trHTML += '<td>' + item.description + '</td>';
+						trHTML += '<td> <a href="question-edit.jsp?id=' + item.id + '" class="btn btn-white">Edit</a></td>';
+						trHTML += '<td><a href="QuestionServlet?action=delete&id=' + item.id + '" class="btn btn-white">Delete</a></tr>';
+
 					});
 					$('#questions').append(trHTML);
 				},

@@ -61,7 +61,7 @@
 			<section class="vbox">
 				<header class="header bg-dark dk">
 					<ul class="nav nav-tabs">
-						<li class="active"><a href="#static" data-toggle="tab">Questions</a></li>
+						<li class="active"><a href="#static" data-toggle="tab">Question types</a></li>
 
 					</ul>
 				</header>
